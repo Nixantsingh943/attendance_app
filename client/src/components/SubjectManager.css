@@ -1,0 +1,192 @@
+.subject-manager-container {
+    max-width: 900px;
+    margin: 120px auto 60px auto; /* Spacious top margin for fixed Navbar */
+    padding: 30px 25px;
+    background: rgba(28, 28, 56, 0.25);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 14px 45px rgba(0, 216, 255, 0.15);
+    color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Heading */
+.subject-manager-container h2 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #00d8ff;
+    text-align: center;
+    text-shadow: 0 2px 14px rgba(0, 216, 255, 0.6);
+    margin-bottom: 1rem;
+}
+
+/* Add Subject Form Styles */
+.subject-form {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.subject-form input[type="text"],
+.subject-form select {
+    flex: 1 1 200px;
+    padding: 14px 18px;
+    border-radius: 22px;
+    border: 1.5px solid rgba(0, 216, 255, 0.5);
+    background: rgba(34, 34, 64, 0.32);
+    color: #e0e0e0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(8px);
+    box-shadow:
+        inset 0 0 12px rgba(0, 216, 255, 0.4);
+}
+
+.subject-form input[type="text"]:focus,
+.subject-form select:focus {
+    border-color: #00ffff;
+    box-shadow:
+        0 0 25px #00ffffaa,
+        inset 0 0 18px #00ffffaa;
+    background: rgba(43, 76, 103, 0.35);
+}
+
+/* Add Subject Button */
+.subject-form button {
+    padding: 14px 38px;
+    border-radius: 28px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0f0f1a;
+    background: linear-gradient(90deg, #00d8ff 55%, #4fd8e7 100%);
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 18px #00d8ffaa inset;
+    transition: background 0.3s ease, transform 0.3s ease;
+    flex: 0 0 auto;
+}
+
+.subject-form button:hover {
+    background: #0f0f1a;
+    color: #00d8ff;
+    box-shadow: 0 0 28px #00d8ff, 0 0 46px #00d8ffbb inset;
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Subject List */
+.subject-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 20px;
+    background: rgba(17, 17, 31, 0.6);
+    padding: 20px 25px;
+    box-shadow: inset 0 0 25px #00d8ff33;
+}
+
+.subject-list h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00d8ff;
+    margin-bottom: 1rem;
+    text-shadow: 0 1px 8px rgba(0, 216, 255, 0.5);
+}
+
+/* Each Subject Card */
+.subject-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    border-radius: 20px;
+    background: rgba(34, 34, 64, 0.35);
+    margin-bottom: 0.85rem;
+    box-shadow: 0 0 10px #00d8ff44 inset;
+    font-weight: 600;
+    color: #cce8ff;
+    transition: background 0.3s ease;
+}
+
+.subject-card:hover {
+    background: rgba(43, 76, 103, 0.5);
+}
+
+/* Delete Button */
+.delete-btn {
+    background: transparent;
+    border: 1.5px solid #ff7777;
+    color: #ff7777;
+    padding: 8px 18px;
+    border-radius: 22px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 0 8px #ff7777aa inset;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background: rgba(255, 119, 119, 0.2);
+    color: #ff4444;
+    border-color: #ff4444;
+    box-shadow: 0 0 16px #ff4444, 0 0 24px #ff4444bb inset;
+    transform: translateY(-2px);
+}
+
+/* Scrollbar styling for subject list */
+.subject-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.subject-list::-webkit-scrollbar-thumb {
+    background-color: #00d8ff99;
+    border-radius: 6px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .subject-manager-container {
+        margin: 100px 15px 40px 15px;
+        padding: 28px 18px;
+    }
+
+    .subject-manager-container h2 {
+        font-size: 2rem;
+    }
+
+    .subject-form {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .subject-form input[type="text"],
+    .subject-form select {
+        flex: 1 1 100%;
+    }
+
+    .subject-form button {
+        width: 100%;
+    }
+
+    .subject-list {
+        max-height: 320px;
+        padding: 18px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .subject-manager-container h2 {
+        font-size: 1.7rem;
+    }
+
+    .subject-form button {
+        font-size: 1rem;
+        padding: 12px 0;
+    }
+}
